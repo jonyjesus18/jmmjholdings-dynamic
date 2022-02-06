@@ -1,0 +1,62 @@
+/* ==========================================
+    FOR DEMO PURPOSE
+  ========================================== */
+body {
+  background: #2a2e32;
+}
+
+.caption {
+  position: relative;
+  width: 100%;
+  color: rgb(247, 19, 19);
+  font-size: 120%;
+  font-family: Helvetica, sans-serif;
+  padding-left: 3%;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 6%;
+  /* transform: translate(-50%, -50%); */
+  color: rgb(255, 255, 255);
+  font-size: 150%;
+  font-family: Georgia, sans-serif;
+}
+
+.container1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#main-img {
+  height: 250px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  #main-img {
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main-img {
+    background-image: url(http://subtlepatterns.com/patterns/dark_embroidery.png);
+  }
+}
+@media (min-width: 992px) {
+  #main-img {
+    background-image: url(http://subtlepatterns.com/patterns/paisley.png);
+  }
+}
+@media (min-width: 1200px) {
+  #main-img {
+    background-image: url(http://subtlepatterns.com/patterns/paisley.png);
+  }
+}
