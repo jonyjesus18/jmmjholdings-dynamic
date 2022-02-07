@@ -12,4 +12,4 @@ def home():
     today = date.today()
     d1 = today.strftime("%B %d, %Y")
     print(d1)
-    return render_template("mainPage.html", d1=d1)
+    return render_template("mainPage.html", d1=2)
