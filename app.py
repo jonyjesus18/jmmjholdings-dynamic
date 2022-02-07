@@ -1,6 +1,20 @@
-from flask import Flask, render_template, request
+from flask import Flask, redirect, url_for, render_template, request
 from datetime import date
-import smtplib
+
+import os
+import openai
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+response = openai.Completion.create(
+  engine="text-davinci-001",
+  prompt="Create a list of 8 questions for my interview as a senior mechanical engineer\n",
+  temperature=0.5,
+  max_tokens=150,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 
 
 app = Flask(__name__)
@@ -13,6 +27,18 @@ def home():
     return render_template("mainPage.html", d1=d1)
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["POST", "GET"])
 def login():
-    return render_template("login.html")
+    if request.method == "POST":
+        job = request.form["job"]
+        questions = request.form['number']
+        print(job)
+        print(questions)
+
+        return render_template("interview.html", 
+        job=job,
+        Questions
+        )
+    else:
+	    return render_template("login.html")
+        

@@ -1,14 +1,13 @@
 {% extends "base.html" %}
+{% block title %}Login Page{% endblock %}
 
+{% block content %}
+<form action="#" method="post">
+	<p>What position are you interviewing for?</p>
+	<p><input type="text" name="job" /></p>
+    <p>How many questions do you want?</p>
+    <p><input type="text" name="number" /></p>
 
-{% block title %} Login Page {% endblock %}
-
-{%  block content %}
-
-<for action ="#" method = "post">
-    <p>Name: </p>
-    <p><input type = "text" name = "nm" /> </p>
-    <p><input type = "submit" name = "submit" /> </p>
+	<p><input type="submit" value="submit"/></p>
 </form>
-
 {% endblock %}
