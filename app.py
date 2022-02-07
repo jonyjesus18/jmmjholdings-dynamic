@@ -21,8 +21,7 @@ def login():
         print(questions)
 
         return render_template("interview.html", 
-        job=job,
-        Questions
+        job=job
         )
     else:
 	    return render_template("login.html")
