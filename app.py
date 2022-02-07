@@ -1,21 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 from datetime import date
 
-import os
-import openai
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-response = openai.Completion.create(
-  engine="text-davinci-001",
-  prompt="Create a list of 8 questions for my interview as a senior mechanical engineer\n",
-  temperature=0.5,
-  max_tokens=150,
-  top_p=1,
-  frequency_penalty=0,
-  presence_penalty=0
-)
-
 
 app = Flask(__name__)
 
@@ -41,4 +26,4 @@ def login():
         )
     else:
 	    return render_template("login.html")
-        
+
