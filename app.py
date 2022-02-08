@@ -25,13 +25,13 @@ def home():
 def login():
     if request.method == "POST":
         job = request.form["job"]
-        questions = request.form['number']
+        experience = request.form['experience']
         print(job)
-        print(questions)
+        print(experience)
 
         response = openai.Completion.create(
         engine="text-davinci-001",
-        prompt=f"Create a list of {questions} questions for my interview as a {job}\n",
+        prompt=f"Create a list of 8 questions for my interview as a {experience} {job}\n",
         temperature=0.5,
         max_tokens=150,
         top_p=1,

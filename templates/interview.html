@@ -3,11 +3,12 @@ content %}
 
 <style>
   .grad {
-    background: radial-gradient(
-      circle,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(254, 0, 0, 1) 61%,
-      rgba(252, 176, 69, 1) 100%
+    background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #f2893e 100%
     );
   }
 </style>
@@ -19,17 +20,19 @@ content %}
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm"></div>
+  <div class="row mb-4">
+    <div class="col-sm-2"></div>
     <div class="col-sm">
-      <ul>
-        {% for value in list %}
-        <p class="blog-post mb-4 text-center">{{ value }}</p>
-        {% endfor %}
-      </ul>
+      {% for value in list %}
+
+      <div class="card m-2">
+        <div class="card-body">{{ value }}</div>
+      </div>
+
+      {% endfor %}
     </div>
 
-    <div class="col-sm"></div>
+    <div class="col-sm-2"></div>
   </div>
 </div>
 
