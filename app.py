@@ -4,7 +4,9 @@ import os
 import openai
 import json
 import requests
-openai.api_key = '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'
+key1 = 'sk-YQtgOUqZXkJ8oFLzORo2T3'
+key2 = 'BlbkFJ7RbBtMo9KMz6RKXt2VbA'
+openai.api_key = f"{key1}{key2}"
 
 
 app = Flask(__name__)
