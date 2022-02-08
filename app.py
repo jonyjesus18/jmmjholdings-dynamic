@@ -1,7 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 from datetime import date
 
-
 app = Flask(__name__)
 
 @app.route("/")
