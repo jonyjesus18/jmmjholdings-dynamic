@@ -1,25 +1,32 @@
-{% extends "base.html" %}
-{% block title %}Login Page{% endblock %}
+{% extends "base.html" %} {% block title %}Login Page{% endblock %} {% block
+content %}
 
-{% block content %}
-
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-success ">
-    <div class="col-md-6 px-0">
-        <h1 class="display-4 fst-italic">Stocks, Data and technology under one roof</h1>
-        <p class="lead my-3">Check out my medium articles and research pieces on technology and finance to give
-            you new ideas to apply on your own projects</p>
-        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
-    </div>
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-success">
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 fst-italic">AI interviewing</h1>
+    <p class="lead my-2">
+      Insert a job position like "research assistant" or "cook" and the number
+      of questions you want (max 12)
+    </p>
+  </div>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm"></div>
+    <div class="col-sm">
+      <form class="text-center" action="#" method="post">
+        <p>What position are you interviewing for?</p>
+        <p><input type="text" name="job" /></p>
+        <p>How many questions do you want?</p>
+        <p><input type="text" name="number" /></p>
 
-<form action="#" method="post">
-	<p>What position are you interviewing for?</p>
-	<p><input type="text" name="job" /></p>
-    <p>How many questions do you want?</p>
-    <p><input type="text" name="number" /></p>
+        <p><input type="submit" value="submit" /></p>
+      </form>
+    </div>
 
-	<p><input type="submit" value="submit"/></p>
-</form>
+    <div class="col-sm"></div>
+  </div>
+</div>
 
 {% endblock %}
