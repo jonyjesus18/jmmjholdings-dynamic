@@ -2,13 +2,8 @@
 content %}
 <style>
   .grad {
-    background-color: #4158d0;
-    background-image: linear-gradient(
-      43deg,
-      #4158d0 0%,
-      #c850c0 46%,
-      #f2893e 100%
-    );
+    background-color: #115ec1;
+    background-image: linear-gradient(160deg, #115ec1 0%, #51bccf 100%);
   }
 </style>
 
@@ -30,14 +25,79 @@ content %}
     <div class="col-sm">
       <div class="p-4 p-md-5 mb-4 text-black rounded">
         <form class="text-center" action="#" method="post">
-          <p class="font-weight-bold">
-            What position are you interviewing for?
-          </p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Title:
+              </label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Mr.</option>
+              <option value="1">Mrs.</option>
+              <option value="2">Ms.</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Your Contact Name"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Your email" />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+            </div>
+          </div>
 
-          <p><input type="text" name="job" /></p>
-          <p>What's your experience level?</p>
-          <p><input type="text" name="experience" /></p>
-          <p><input type="submit" value="submit" /></p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Industry</label
+              >
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">Finantial Services</option>
+              <option value="2">Technology</option>
+              <option value="3">Government</option>
+              <option value="4">Healthcare</option>
+              <option value="5">Other Services</option>
+              <option value="6">Military</option>
+              <option value="7">Education</option>
+              <option value="8">Other</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >I want to receive:</label
+              >
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">Weekly updates</option>
+              <option value="2">Monthly Updates</option>
+              <option value="3">Only Tech</option>
+              <option value="4">Only Finance</option>
+              <option value="5">All Correspondence</option>
+            </select>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="button"
+            aria-pressed="false"
+            autocomplete="off"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
