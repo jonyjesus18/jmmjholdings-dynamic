@@ -51,3 +51,10 @@ def login():
     else:
 	    return render_template("login.html")
 
+
+
+@app.route("/joinMailingList", methods=["POST", "GET"])
+def joinMailingList():
+	return render_template("joinMailingList.html")
+
+
