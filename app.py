@@ -21,8 +21,8 @@ def home():
     return render_template("mainPage.html", d1=d1)
 
 
-@app.route("/interview", methods=["POST", "GET"])
-def interview():
+@app.route("/interviewPrompt", methods=["POST", "GET"])
+def login():
     if request.method == "POST":
         job = request.form["job"]
         experience = request.form['experience']
@@ -36,8 +36,8 @@ def interview():
         max_tokens=150,
         top_p=1,
         frequency_penalty=0,
-        presence_penalty=0
-)
+        presence_penalty=0)
+        
         text = response.choices[0].text
         print(text)
         list = text.split('\n')[1:]
@@ -49,7 +49,7 @@ def interview():
         )
 
     else:
-	    return render_template("interview.html")
+	    return render_template("interviewPrompt.html")
 
 
 
