@@ -21,8 +21,8 @@ def home():
     return render_template("mainPage.html", d1=d1)
 
 
-@app.route("/login", methods=["POST", "GET"])
-def login():
+@app.route("/interview", methods=["POST", "GET"])
+def interview():
     if request.method == "POST":
         job = request.form["job"]
         experience = request.form['experience']
@@ -49,7 +49,7 @@ def login():
         )
 
     else:
-	    return render_template("login.html")
+	    return render_template("interview.html")
 
 
 
